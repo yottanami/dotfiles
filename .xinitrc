@@ -29,3 +29,4 @@ setxkbmap -option ctrl:swapcaps
 export FG42_V3=true
 exec fg42-wm
 #xinput set-prop 14 'libinput Accel Speed' 1
+export KUBECONFIG=${PWD}/kubeconfig
