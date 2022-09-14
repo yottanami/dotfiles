@@ -1,3 +1,4 @@
+
 ;;; FG42 --- The mighty editor for the emacsians -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (c) 2010-2020 Sameer Rahmani <lxsameer@gnu.org>
@@ -69,8 +70,7 @@
 (require 'cubes/terraform)
 (require 'cubes/graph)
 
-
-(defvar global-font-size 12)
+(defvar global-font-size 10)
 
 (custom-set-faces
  '(mini-modeline-mode-line
@@ -95,7 +95,7 @@
 
 ;TODO: Move this blog to a macro or something ===========
 (when-wm
- (setq global-font-size 10)
+ (setq global-font-size 8)
  (custom-set-faces
   '(mini-modeline-mode-line
     ((((background light))
@@ -110,7 +110,7 @@
      ("--output HDMI-1 --primary"
       "--output eDP-1 --off")
      :hdmi-main
-     ("--output DP-3-1-5 --primary"
+     ("--output DP-3-1-5 --primary --mode 2560x1080"
       "--output eDP-1 --scale 0.5x0.5 --below DP-3-1-5")
      :edp-only
      ("--output eDP-1 --scale 0.5x0.5"
@@ -190,4 +190,5 @@
   (load "~/.fg42.user.el"))
 
 (provide 'fg42.user)
-;;; fg42.user.el ends here
+
+(straight-use-package 'org-tree-slide)
